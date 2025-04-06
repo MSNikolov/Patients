@@ -11,43 +11,8 @@
 
     <script>
         // 1. Google Sheets API URL and your API key
-        const sheetID = 'your-google-sheet-id';  // Replace with your Google Sheets ID
-        const apiKey = '<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Sheets Text Display</title>
-</head>
-<body>
-    <h1>Welcome to the Display</h1>
-    <p id="display-text">Loading...</p>
-
-    <script>
-        // 1. Google Sheets API URL and your API key
-        const sheetID = 'e/2PACX-1vSJWwEbX-OY6_0dJnxmZzckkZatH8ID7m3k-8zcB-ey5g7w1IUB6TfJn02KSpwINVO3XJR17tLo5IeN/pubhtml';  // Replace with your Google Sheets ID
+        const sheetID = '1Q25o6wFtX4C1wvYy1Q9hq_NdE9swfWr7fMZNdh6q-T0';  // Replace with your Google Sheets ID
         const apiKey = 'AIzaSyCfTH5hgCyEl3koYAp2ufWLr9ghOTaMe18';    // Replace with your Google Sheets API key
-
-        // 2. Construct the URL to fetch data from your Google Sheet
-        const sheetURL = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/Sheet1?key=${apiKey}`;
-
-        // 3. Fetch data from Google Sheets
-        fetch(sheetURL)
-            .then(response => response.json())
-            .then(data => {
-                // 4. Get the text from the first row (or any specific row you need)
-                const text = data.values[1][0];  // Assuming the text is in the first column of the second row
-
-                // 5. Display the text on the page
-                document.getElementById('display-text').innerText = text;
-            })
-            .catch(error => {
-                console.error('Error fetching data: ', error);
-                document.getElementById('display-text').innerText = "Failed to load content.";
-            });
-    </script>
-</body>
-</html>';    // Replace with your Google Sheets API key
 
         // 2. Construct the URL to fetch data from your Google Sheet
         const sheetURL = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/Sheet1?key=${apiKey}`;
